@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppind', sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+}
+.card h1{
+    font-weight: 500;
+    color: #000;
+}
+.card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+label{
+    display: block;
+    width: 200px;
+    background: #e3362c;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input{
+    display: none;
+}
+    </style>
+</html>head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1>User</h1>
+            <p>@User</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBRdmz3LadjgP_7giopi8RU6TJQgE-9IZaYXSJYWHuFv3ty1vbrgMiiU6XqdhxXyFqJqU&usqp=CAU" id="profile-pic">
+            <label for="input-file">updata image</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+        </div>
+    </div>
+    <script>
+
+let profilepic = document.getEIementById("profile-pic")
+let inputfile = document.getEIementById("input-file")
+
+inputfile.onchange =  function(){
+    profilepic.scr = URL.createObjectURL(inputfile.files[0])
+}
+
+
+    </script>
+</body>
+</head>
